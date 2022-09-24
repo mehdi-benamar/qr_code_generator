@@ -1,0 +1,120 @@
+*, *::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  font-family: Poppins, serif;
+  background-color: rgb(230, 223, 223);
+}
+
+.header{
+  background-color: rgb(46, 116, 140);
+  color: #fff;
+  padding: 10px 0 10px 0
+}
+
+.header h1{
+  margin-left: 20px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+.qrCode{
+  width: 300px;
+  height: 300px;
+}
+
+.qrCode img{
+  width: 100%;
+}
+
+div.form{
+  width: 400px;
+  height: 300px;
+}
+
+div form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.field, .btn-generate{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.field label{
+  font-size: 25px;
+}
+
+.field input, .field select{
+  height: 35px;
+  font-size: 15px;
+}
+
+.field input{
+  outline: transparent;
+  border: none;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.field input:focus{
+  outline: solid 1px rgb(237, 45, 45);
+}
+
+.btn-generate button{
+  font-size: 20px;
+  width: 100%;
+  background-color: rgb(237, 45, 45);
+  color: #fff;
+  padding: 10px 0 10px 0;
+  border-radius: 5px;
+}
+
+.btn-generate button:hover{
+  cursor: pointer;
+}
+
+.result{
+  width: 250px;
+  height: 250px;
+  margin: 150px auto;
+
+}
+
+.result--image{
+  width: 100%;
+  height: 100%;
+}
+
+.result--image img{
+  width: 100%;
+  height: 100%;
+  /* display:none; */
+}
+
+.result .svg{
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+svg{
+  width: 100%;
+  height: 100%;
+}
