@@ -77,7 +77,12 @@ div form{
   outline: solid 1px rgb(237, 45, 45);
 }
 
-.btn-generate button{
+.errorUrl{
+  color: red;
+  margin-top: 5px;
+}
+
+.btn-generate button, .result .btn-download{
   font-size: 20px;
   width: 100%;
   background-color: rgb(237, 45, 45);
@@ -91,21 +96,27 @@ div form{
 }
 
 .result{
-  width: 250px;
-  height: 250px;
+  width: 280px;
+  height: 280px;
   margin: 150px auto;
 
 }
 
-.result--image{
+.result-fetch{
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.result-fetch img{
   width: 100%;
   height: 100%;
 }
 
-.result--image img{
-  width: 100%;
-  height: 100%;
-  /* display:none; */
+.result .btn-download{
+  display: inline-block;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .result .svg{

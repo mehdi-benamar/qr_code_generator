@@ -23,29 +23,32 @@
                 <img src="./assets/qr-code.png" alt="image d'un qr code">
             </div>
             <div class="form">
-                <form action="#" method="">
+                <form action="#" method="" id="form">
                     <div class="field">
                         <label for="url">URL:</label>
                         <input type="url" id="url" name="url">
+                        <span id="errorUrl" class="errorUrl"></span>
                     </div>
                     <div class="field">
                         <label for="size">TAILLE:</label>
                         <select name="size" id="size">
-                            <option value="200">200</option>
-                            <option value="400">400</option>
-                            <option value="600">600</option>
+                            <option value="200x200">200</option>
+                            <option value="400x600">400</option>
+                            <option value="600x600">600</option>
+                            <option value="800x800">800</option>
                         </select>
                     </div>
                     <div class="btn-generate">
-                        <button type="submit">Valider</button>
+                        <button type="submit" id="btn-validate">Valider</button>
                     </div>
                 </form>
             </div>
         </div>
 
         <div class="result">
-            <div class="result--image" id="result--image">
-                <img src="" alt="création d'un qr code">
+            <div class="result-fetch" id="result-fetch">
+                <img src="" alt="création d'un qr code" id="result-fetch">
+                <a id="btn-download" class="btn-download" >Télécharger</a>
             </div>
             <div class="svg">
                 <svg version="1.1" id="L9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
