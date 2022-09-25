@@ -4,13 +4,13 @@ const btnValidate = document.querySelector("#form")
 const btnDownload = document.querySelector("#btn-download")
 const svg = document.querySelector(".svg")
 const errorUrl = document.querySelector("#errorUrl")
-const regexUrl = /^https?:\/\/(www\.)?[a-zA-Z0-9\-_\.]+\.[a-z]{2,4}((\?|\/)[a-z0-9=&\-\?\+_\/]+)*$/
+const regexUrl = /^https?:\/\/(www[0-9]?\.)?[a-zA-Z0-9\-_\.]+\.[a-z]{2,4}((\?|\/)[a-zA-Z0-9=&\-\?\+_\/,%@\.!:#]+)*$/
 
 
 btnValidate.addEventListener("submit", e => {
   e.preventDefault()
   const size =  e.target.size.value
-  const url = e.target.url.value
+  const url = e.target.url.value.trim()
   
   if(url.match(regexUrl) == null){
     errorUrl.textContent = "Vous devez saisir un lien valide"
