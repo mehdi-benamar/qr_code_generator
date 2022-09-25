@@ -102,6 +102,7 @@ div form{
   height: 280px;
   margin: 150px auto;
   display: none;
+  padding-bottom: 5px;
 }
 
 .result-fetch{
