@@ -33,7 +33,7 @@ async function fetchQrCode(size, url){
 async function qrCodeResult(size, url){
       svg.style.display = "none"
       const blob = await fetchQrCode(size, encodeURIComponent(url))
-      result.style.display = "initial"
+      result.style.display = "block"
       imgQrCode.src = URL.createObjectURL(blob)
       btnDownload.href = URL.createObjectURL(blob)
       btnDownload.download = "QR_Code"
