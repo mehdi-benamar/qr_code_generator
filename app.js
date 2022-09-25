@@ -4,21 +4,23 @@ const btnValidate = document.querySelector("#form")
 const btnDownload = document.querySelector("#btn-download")
 const svg = document.querySelector(".svg")
 const errorUrl = document.querySelector("#errorUrl")
-const regexUrl = /^https?:\/\/(www\.)?[a-zA-Z0-9-]+\.[a-z]{2,4}(\/[a-z0-9=&]+)*$/
+const regexUrl = /^https?:\/\/(www\.)?[a-zA-Z0-9\-_]+\.[a-z]{2,4}((\?|\/)[a-z0-9=&\?\+]+)*$/
 
 
 btnValidate.addEventListener("submit", e => {
   e.preventDefault()
   const size =  e.target.size.value
   const url = e.target.url.value
-  result.style.display = "none"
   
   if(url.match(regexUrl) == null){
     errorUrl.textContent = "Vous devez saisir un lien valide"
   }else{
+    errorUrl.textContent = ""
+    result.parentElement.style.display = "block"
+    result.style.display = "none"
     svg.style.display = "initial"
     errorUrl.textContent = ""
-    setTimeout(() => qrCodeResult(size, encodeURI(url)), 2500)
+    setTimeout(() => qrCodeResult(size, url), 2500)
   }
 })
 
@@ -31,7 +33,7 @@ async function fetchQrCode(size, url){
 
 async function qrCodeResult(size, url){
       svg.style.display = "none"
-      const blob = await fetchQrCode(size, url)
+      const blob = await fetchQrCode(size, encodeURIComponent(url))
       result.style.display = "initial"
       imgQrCode.src = URL.createObjectURL(blob)
       btnDownload.href = URL.createObjectURL(blob)

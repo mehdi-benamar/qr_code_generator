@@ -39,7 +39,7 @@ body{
 }
 
 div.form{
-  width: 400px;
+  width: 420px;
   height: 300px;
 }
 
@@ -99,7 +99,7 @@ div form{
   width: 280px;
   height: 280px;
   margin: 150px auto;
-
+  display: none;
 }
 
 .result-fetch{
@@ -128,4 +128,16 @@ div form{
 svg{
   width: 100%;
   height: 100%;
+}
+
+/* responsive */
+@media all and (max-width: 768px){
+
+  .header h1{
+    margin-left: 0;
+    text-align: center;
+  }
+  .qrCode{
+    display: none;
+  }
 }
