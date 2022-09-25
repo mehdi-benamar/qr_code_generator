@@ -4,7 +4,7 @@ const btnValidate = document.querySelector("#form")
 const btnDownload = document.querySelector("#btn-download")
 const svg = document.querySelector(".svg")
 const errorUrl = document.querySelector("#errorUrl")
-const regexUrl = /^https?:\/\/(www\.)?[a-zA-Z0-9\-_]+\.[a-z]{2,4}((\?|\/)[a-z0-9=&\-\?\+]+)*$/
+const regexUrl = /^https?:\/\/(www\.)?[a-zA-Z0-9\-_\.]+\.[a-z]{2,4}((\?|\/)[a-z0-9=&\-\?\+_\/]+)*$/
 
 
 btnValidate.addEventListener("submit", e => {
